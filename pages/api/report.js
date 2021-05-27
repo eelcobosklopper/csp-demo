@@ -1,7 +1,8 @@
 export default function handler(req, res) {
   if (req.method === "POST") {
     console.log(req.body);
-    res.status(200);
+    res.status(200).end();
+  } else {
+    res.status(405).end();
   }
-  return resolve(); // Next api really wants me to return a promise
 }
